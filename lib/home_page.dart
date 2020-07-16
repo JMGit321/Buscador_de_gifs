@@ -17,9 +17,9 @@ class _HomepageState extends State<Homepage> {
  Future<Map> _getGifs() async{
     http.Response response;
     if(_search==null||_search.isEmpty){
-      response = await http.get("https://api.giphy.com/v1/gifs/trending?api_key=AMb6SZRndzAdQwAlQFh2aIRtUW8XaOgr&limit=20&rating=g");
+      response = await http.get("https://api.giphy.com/v1/gifs/trending?api_key=12233445678&rating=g");//arrume sua propria key !!!!
     }else{
-      response = await http.get("https://api.giphy.com/v1/gifs/search?api_key=AMb6SZRndzAdQwAlQFh2aIRtUW8XaOgr&q=$_search&limit=20&offset=$_offset&rating=g&lang=e");
+      response = await http.get("https://api.giphy.com/v1/gifs/search?api_key=12233445678$_search&limit=20&offset=$_offset&rating=g&lang=e");
     }
     return json.decode(response.body);
   }
